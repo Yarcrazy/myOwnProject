@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+				integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link href="./node_modules/lato-font/css/lato-font.css" rel="stylesheet">
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
+	<script src="./script.js"></script>
+</head>
+<body>
+<div class="content">
+	<header class="header">
+		<div class="container header-flex">
+			<div class="header-left">
+				<a class="logo" href="index.html"><img src="Images/Logo.png" alt="logo"><span>BRAN<span>D</span></span></a>
+				<form action="#" class="search_form">
+					<details class="browse">
+						<summary><span class="browse-summary">Browse</span>
+							<i class="fa fa-caret-down" aria-hidden="true"></i>
+						</summary>
+						<nav class="browse-drop">
+							<div class="triangle browse-drop__triangle"></div>
+							<span>Women</span>
+							<ul class="browse-drop-list">
+								<li><a href="#">Dresses</a></li>
+								<li><a href="#">Tops</a></li>
+								<li><a href="#">Sweaters/Knits</a></li>
+								<li><a href="#">Jackets/Coats</a></li>
+								<li><a href="#">Blazers</a></li>
+								<li><a href="#">Denim</a></li>
+								<li><a href="#">Leggings/Pants</a></li>
+								<li><a href="#">Skirts/Shorts</a></li>
+								<li><a href="#">Accessories</a></li>
+							</ul>
+							<span>Men</span>
+							<ul class="browse-drop-list">
+								<li><a href="#">Tees/Tank tops</a></li>
+								<li><a href="#">Shirts/Polos</a></li>
+								<li><a href="#">Sweaters</a></li>
+								<li><a href="#">Sweatshirts/Hoodies</a></li>
+								<li><a href="#">Blazers</a></li>
+								<li><a href="#">Jackets/vests</a></li>
+							</ul>
+						</nav>
+					</details>
+					<input class="search_but" type="search" placeholder="Search for item...">
+					<button class="search_but" type="submit">
+						<img src="Images/Search.png" alt="Search">
+					</button>
+				</form>
+			</div>
+			<div class="header-right">
+				<div class="basket-pos">
+					<a href="Pages/shopping%20cart.html" class="basket">
+						<img src="Images/Basket.svg" alt="Basket">
+					</a>
+					<div class="drop-basket">
+						<div class="triangle drop-basket__triangle"></div>
+						<table class="db-table"></table>
+						<div class="total-flex">
+							<span>TOTAL</span>
+							<span class="total-cart-price"></span>
+						</div>
+						<a href="./Pages/checkout.html" class="cart-but">CHECKOUT</a>
+						<a href="./Pages/shopping cart.html" class="cart-but">GO TO CART</a>
+					</div>
+					<div id="basket-counter"></div>
+				</div>
+				<a href="#" class="my_acc">My Account</a>
+			</div>
+		</div>
+	</header>
+	<nav class="container nav">
+		<ul class="menu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Man</a>
+				<div class="mega">
+					<div class="triangle mega__triangle"></div>
+					<div class="mega-flex">
+						<h3>Women</h3>
+						<ul>
+							<li><a href="">Dresses</a></li>
+							<li><a href="">Tops</a></li>
+							<li><a href="">Sweaters/Knits</a></li>
+							<li><a href="">Jackets/Coats</a></li>
+							<li><a href="">Blazers</a></li>
+							<li><a href="">Denim</a></li>
+							<li><a href="">Leggings/Pants</a></li>
+							<li><a href="">Skirts/Shorts</a></li>
+							<li><a href="">Accessories</a></li>
+						</ul>
+					</div>
+					<div class="mega-flex">
+						<h3>Women</h3>
+						<ul>
+							<li><a href="">Dresses</a></li>
+							<li><a href="">Tops</a></li>
+							<li><a href="">Sweaters/Knits</a></li>
+							<li><a href="">Jackets/Coats</a></li>
+						</ul>
+						<br>
+						<h3>Women</h3>
+						<ul>
+							<li><a href="">Dresses</a></li>
+							<li><a href="">Tops</a></li>
+							<li><a href="">Sweaters/Knits</a></li>
+						</ul>
+					</div>
+					<div class="mega-flex">
+						<h3>Women</h3>
+						<ul>
+							<li><a href="">Dresses</a></li>
+							<li><a href="">Tops</a></li>
+							<li><a href="">Sweaters/Knits</a></li>
+							<li><a href="">Jackets/Coats</a></li>
+						</ul>
+						<div class="super-sale-block">
+							<a href="#" class="super-sale">Super sale!</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li><a href="#">Women</a></li>
+			<li><a href="#">Kids</a></li>
+			<li><a href="#">Accoseriese</a></li>
+			<li><a href="#">Featured</a></li>
+			<li><a href="#">Hot Deals</a></li>
+		</ul>
+	</nav>
+	<header class="brand">
+		<div class="container brand_img">
+			<div href="#" class="brand_text">
+				<h2>THE BRAND</h2><br><br>
+				<h3>OF LUXERIOUS <span>FASHION</span></h3>
+			</div>
+		</div>
+	</header>
+	<section class="tile">
+		<div class="container tile_4">
+			<div class="tile_left">
+				<a href="#" class="tile_l_1">
+					<div class="tile_offer">
+						<div class="line_1">
+							HOT DEAL
+						</div>
+						<div class="line_2">
+							FOR MEN
+						</div>
+					</div>
+				</a>
+				<a href="#" class="tile_l_2">
+					<div class="tile_offer">
+						<div class="line_1">
+							LUXIROUS&#38;TRENDY
+						</div>
+						<div class="line_2">
+							ACCESORIES
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="tile_right">
+				<a href="" class="tile_r_1">
+					<div class="tile_offer">
+						<div class="line_1">
+							30% OFFER
+						</div>
+						<div class="line_2">
+							WOMEN
+						</div>
+					</div>
+				</a>
+				<a href="" class="tile_r_2">
+					<div class="tile_offer">
+						<div class="line_1">
+							NEW ARRIVALS
+						</div>
+						<div class="line_2">
+							FOR KIDS
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="featured_items">
+		<div class="container">
+			<h3 class="fi-h3">Featured Items</h3>
+			<h4 class="fi-h4">Shop for items based on what we featured in this week</h4>
+			<div class="prod_flex"></div>
+			<div class="toallprod_flex">
+				<a href="Pages/product.html" class="toallprod">
+					Browse All Product &#8594;
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="advantages">
+		<div class="container adv">
+			<div class="adv_l">
+				<a href="#" class="adv_l_text">
+					<h2>30% <span>OFFER</span></h2><br>
+					<h3>FOR WOMEN</h3>
+				</a>
+			</div>
+			<div class="adv_r">
+				<div class="art_adv">
+					<div>
+						<img src="Images/car.png" alt="car">
+					</div>
+					<article class="art_text">
+						<h3>Free Delivery</h3><br>
+						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+					</article>
+				</div>
+				<div class="art_adv">
+					<div>
+						<img src="Images/percent.png" alt="percent">
+					</div>
+					<article class="art_text">
+						<h3>Sales &amp; discounts</h3><br>
+						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+					</article>
+				</div>
+				<div class="art_adv">
+					<div>
+						<img src="Images/crown.png" alt="crown">
+					</div>
+					<article class="art_text">
+						<h3>Quality assurance</h3><br>
+						<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="subscribe">
+		<div class="container subs">
+			<article class="subs_left">
+				<div class="comment_img">
+					<img src="Images/Happy_buyer.png" alt="Happy_buyer">
+				</div>
+				<div class="comment">
+					<p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam
+						condimentum mattis neque sed pretium”</p>
+					<div class="sign_up">
+						<p>Bin Burhan</p>
+						<span>Dhaka, Bd</span>
+					</div>
+				</div>
+			</article>
+			<div class="subs_right">
+				<div class="subs_text_right">
+					<h3>SUBSCRIBE</h3>
+					<h4>FOR OUR NEWLETTER AND PROMOTION</h4>
+				</div>
+				<form action="#" class="subs_form">
+					<div class="pos_subs_form">
+						<input type="email" placeholder="Enter Your Email">
+						<button type="submit">Subscribe</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+<footer class="footer">
+	<div class="container footer_flex">
+		<div class="brand_footer">
+			<a class="logo" href="index.html"><img src="Images/Logo.png" alt="logo"><span>BRAN<span>D</span></span></a>
+			<p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+				multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and
+				cross-unit partnerships. <br><br> Efficiently plagiarize 24/365 action items and focused infomediaries.
+				Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+		</div>
+		<nav class="cis">
+			<div>
+				<span>COMPANY</span>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">How It Works</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<span>INFORMATION</span>
+				<ul>
+					<li><a href="#">Tearms &#38; Condition</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">How to Buy</a></li>
+					<li><a href="#">How to Sell</a></li>
+					<li><a href="#">Promotion</a></li>
+				</ul>
+			</div>
+			<div>
+				<span>SHOP CATEGORY</span>
+				<ul>
+					<li><a href="#">Men</a></li>
+					<li><a href="#">Women</a></li>
+					<li><a href="#">Child</a></li>
+					<li><a href="#">Apparel</a></li>
+					<li><a href="#">Brows All</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="copyright">
+		<div class="container cpr">
+			<span>&copy; 2017  Brand  All Rights Reserved.</span>
+			<aside class="social_icons">
+				<a href="#" class="contsi"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="contsi"><i class="fab fa-twitter"></i></a>
+				<a href="#" class="contsi"><i class="fab fa-linkedin-in"></i></a>
+				<a href="#" class="contsi"><i class="fab fa-pinterest-p"></i></a>
+				<a href="#" class="contsi"><i class="fab fa-google-plus-g"></i></a>
+			</aside>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
