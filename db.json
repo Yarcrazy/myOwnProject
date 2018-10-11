@@ -1,0 +1,122 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "name": "Crescent T-short",
+      "price": "10",
+      "url": "http://127.0.0.1:8080/Images/i_1.jpg",
+      "alt": "i_1"
+    },
+    {
+      "id": 2,
+      "name": "Blouse",
+      "price": "9",
+      "url": "http://127.0.0.1:8080/Images/i_2.jpg",
+      "alt": "i_2"
+    },
+    {
+      "id": 3,
+      "name": "Down jacket",
+      "price": "150",
+      "url": "http://127.0.0.1:8080/Images/i_3.jpg",
+      "alt": "i_3"
+    },
+    {
+      "id": 4,
+      "name": "Flower dress",
+      "price": "15",
+      "url": "http://127.0.0.1:8080/Images/i_4.jpg",
+      "alt": "i_4"
+    },
+    {
+      "id": 5,
+      "name": "Striped dress",
+      "price": "15",
+      "url": "http://127.0.0.1:8080/Images/i_5.jpg",
+      "alt": "i_5"
+    },
+    {
+      "id": 6,
+      "name": "Jacket",
+      "price": "18",
+      "url": "http://127.0.0.1:8080/Images/i_6.jpg",
+      "alt": "i_6"
+    },
+    {
+      "id": 7,
+      "name": "Pants",
+      "price": "20",
+      "url": "http://127.0.0.1:8080/Images/i_7.jpg",
+      "alt": "i_7"
+    },
+    {
+      "id": 8,
+      "name": "Shorts",
+      "price": "14",
+      "url": "http://127.0.0.1:8080/Images/i_8.jpg",
+      "alt": "i_8"
+    },
+    {
+      "id": 9,
+      "name": "Spotted T-short",
+      "price": "10",
+      "url": "http://127.0.0.1:8080/Images/i_9.jpg",
+      "alt": "i_9"
+    },
+    {
+      "id": 10,
+      "name": "Cool coat",
+      "price": "10",
+      "url": "http://127.0.0.1:8080/Images/i_10.jpg",
+      "alt": "i_10"
+    },
+    {
+      "id": 11,
+      "name": "Coat",
+      "price": "11",
+      "url": "http://127.0.0.1:8080/Images/i_11.jpg",
+      "alt": "i_11"
+    },
+    {
+      "id": 12,
+      "name": "Vest",
+      "price": "12",
+      "url": "http://127.0.0.1:8080/Images/i_12.jpg",
+      "alt": "i_12"
+    },
+    {
+      "id": 13,
+      "name": "Casual jacket",
+      "price": "13",
+      "url": "http://127.0.0.1:8080/Images/i_13.jpg",
+      "alt": "i_13"
+    },
+    {
+      "id": 14,
+      "name": "Pea t-shirt",
+      "price": "14",
+      "url": "http://127.0.0.1:8080/Images/i_14.jpg",
+      "alt": "i_14"
+    }
+  ],
+  "cart": [
+    {
+      "id": "3",
+      "quantity": 2,
+      "name": "Down jacket",
+      "price": "150",
+      "url": "http://127.0.0.1:8080/Images/i_3.jpg",
+      "alt": "i_3"
+    }
+  ],
+  "selectedGood": [
+    {
+      "id": "1",
+      "name": "Down jacket",
+      "price": "150",
+      "url": "http://127.0.0.1:8080/Images/i_3.jpg",
+      "alt": "i_3",
+      "good": "3"
+    }
+  ]
+}
