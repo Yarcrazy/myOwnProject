@@ -9,7 +9,7 @@ function buildCart() {
     dataType: 'json',
     success: function (cart) {
       var totalPrice = 0;
-      cart.forEach(function(item) {
+      cart.forEach(function (item) {
         var $tr = $('<tr />', {
           class: 'tprod-row'
         });
@@ -69,11 +69,14 @@ function buildCart() {
           class: 'tRow-del',
           'data-id': item.id
         });
+        var $a = $('<a />');
         var $i = $('<i />', {
           class: 'fa fa-times-circle',
           "aria-hidden": "true"
         });
-        $td.append($i);
+
+        $a.append($i);
+        $td.append($a);
         $tr.append($td);
 
         $tableCart.append($tr);
@@ -88,13 +91,13 @@ function buildCart() {
   });
 }
 
-(function($) {
+(function ($) {
   $(function () {
     // Отрисовываем корзину
     buildCart();
 
     // Вешаем событие изменения json при изменении количества товаров в корзине
-    $('.tablecart').on('change', '.tquantity', function() {
+    $('.tablecart').on('change', '.tquantity', function () {
       var id = $(this).attr('data-id');
       var entity = $('.tablecart [data-id="' + id + '"]');
       $.ajax({
@@ -114,9 +117,9 @@ function buildCart() {
     });
 
     // Вешаем событие при нажатии на кнопку удалить из корзины
-    $('.shopcart').on('click', '.clear_cart', function() {
+    $('.shopcart').on('click', '.clear_cart', function () {
       var rows = document.querySelectorAll('.tquantity');
-      rows.forEach(function(row) {
+      rows.forEach(function (row) {
         var id = row.dataset.id;
         // Отправляем запрос на удаление
         $.ajax({
@@ -128,7 +131,21 @@ function buildCart() {
           }
         });
       })
+    });
 
+    // Вешаем событие при нажатии на кнопку удалить из корзины
+    $('.shopcart').on('click', '.tRow-del', function () {
+      // Получаем id товара, который пользователь хочет удалить
+      var id = $(this).attr('data-id');
+      // Отправляем запрос на удаление
+      $.ajax({
+        url: 'http://localhost:3000/cart/' + id,
+        type: 'DELETE',
+        success: function () {
+          // Перерисовываем корзину
+          buildCart();
+        }
+      })
     });
   })
 })(jQuery);
