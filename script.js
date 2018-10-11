@@ -13,17 +13,22 @@ function buildGoods(amount) {
   $.ajax({
     url: 'http://localhost:3000/goods?_limit=' + amount,
     dataType: 'json',
-    success: function(goods) {
+    success: function (goods) {
       // Перебираем объекты в массиве товаров
-      goods.forEach(function(good) {
+      goods.forEach(function (good) {
         // Создаем родительский элемент
         var $parentItem = $('<div />', {
           class: 'parent_item'
         });
         // Создаем элемент ссылки на страницу товара
         var $a = $('<a />', {
-          href: 'Pages/singlePage.html',
-          class: 'item'
+          class: 'item',
+          href: 'Pages/singlepage.html',
+          "data-id": good.id,
+          "data-name": good.name,
+          "data-price": good.price,
+          "data-url": good.url,
+          "data-alt": good.alt
         });
 
         // Создаем элемент изображения товара
@@ -88,13 +93,13 @@ function buildCart() {
   $.ajax({
     url: 'http://localhost:3000/cart',
     dataType: 'json',
-    success: function(cart) {
+    success: function (cart) {
       // Суммарная стоимость товаров в корзине и количество товаров в корзине
       var totalPrice = 0;
       var cartCount = 0;
 
       // Отрисовываем каждый товар в корзине
-      cart.forEach(function(item) {
+      cart.forEach(function (item) {
         var $tr = $('<tr />', {
           class: 'db-prod',
           'data-id': item.id,
@@ -164,12 +169,12 @@ function buildCart() {
 
       // Реализуем отображение корзины при наведении мыши при наличии в ней товаров
       var $dropBasket = $('.drop-basket');
-      $('.basket-pos').mouseover(function() {
+      $('.basket-pos').mouseover(function () {
         if (cartCount !== 0) {
           $dropBasket.slideDown();
         }
       });
-      $('.basket-pos').mouseleave(function() {
+      $('.basket-pos').mouseleave(function () {
         if (cartCount !== 0) {
           $dropBasket.slideUp();
         }
@@ -178,15 +183,15 @@ function buildCart() {
   })
 }
 
-(function($) {
-  $(function() {
+(function ($) {
+  $(function () {
     // Заполняем блок товаров конкретным количеством для главной страницы featured items
     buildGoods(8);
     // Отрисовываем корзину
     buildCart();
 
     // Вешаем событие при нажатии на кнопку Добавить в корзину
-    $('.prod_flex').on('click', '.add_to_cart', function() {
+    $('.prod_flex').on('click', '.add_to_cart', function () {
       // Определяем id товара, который пользователь хочет купить
       var id = $(this).attr('data-id');
 
@@ -233,9 +238,10 @@ function buildCart() {
     });
 
     // Вешаем событие при нажатии на кнопку удалить из корзины
-    $('.db-table').on('click', '.dbp-del', function() {
+    $('.db-table').on('click', '.dbp-del', function () {
       // Получаем id и quantity товара, который пользователь хочет удалить
       var id = $(this).attr('data-id');
+
       var quantity = +$(this).attr('data-quantity');
       // Получаем DOM кнопки, чтобы использовать в ajax запросе
       var entity = $(this);
@@ -245,7 +251,7 @@ function buildCart() {
         $.ajax({
           url: 'http://localhost:3000/cart/' + id,
           type: 'DELETE',
-          success: function() {
+          success: function () {
             // Перерисовываем корзины
             buildCart();
           }
@@ -261,15 +267,35 @@ function buildCart() {
           data: JSON.stringify({
             quantity: +entity.attr('data-quantity') - 1
           }),
-          success: function() {
+          success: function () {
             // Перерисовываем корзины
             buildCart();
           }
         })
       }
     });
+
+    // Вешаем событие перехода на страницу товара при нажатии на ссылку товара
+    $('.prod_flex').on('click', '.item', function () {
+
+      // Добавляем выбранный товар в selected good json
+      $.ajax({
+        url: 'http://localhost:3000/selectedGood/1',
+        type: 'PATCH',
+        headers: {
+          'content-type': 'application/json'
+        },
+        data: JSON.stringify({
+          good: $(this).attr('data-id'),
+          name: $(this).attr('data-name'),
+          price: $(this).attr('data-price'),
+          url: $(this).attr('data-url'),
+          alt: $(this).attr('data-alt')
+        })
+      });
+    });
   })
 })(jQuery);
 //TODO gulp!!!! далее по плану
 //TODO сделать нормальные "звезды" в drop корзине
-//TODO по-человечески выровнять корзину
+// TODO по-человечески выровнять корзину
